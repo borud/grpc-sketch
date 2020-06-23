@@ -19,3 +19,6 @@ This should fetch the dependencies.
 
 The default build target is the most useful since it runs linting,
 vetting and testing.  For more details look at the `Makefile`.
+
+    make
+

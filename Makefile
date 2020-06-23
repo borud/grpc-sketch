@@ -1,7 +1,11 @@
 all: test lint vet build
 
-build:
+build: server client
+
+server:
 	@cd cmd/server && go build -o ../../bin/server
+
+client:
 	@cd cmd/client && go build -o ../../bin/client
 
 lint:
