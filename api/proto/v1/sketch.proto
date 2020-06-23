@@ -1,0 +1,21 @@
+// Protobuffer defs for sketch
+
+syntax = "proto3";
+
+package sketchpb;
+
+option go_package = ".;sketchpb";
+
+message Request {
+  uint64 num_random_numbers = 1;
+}
+
+message Response {
+  uint64 random_number = 1;
+}
+
+service Sketch {
+  rpc GetRandomNumbers(Request) returns (stream Response) {}
+}
+
+
